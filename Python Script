@@ -1,0 +1,30 @@
+import numpy as np
+import pandas as pd
+from pandas import Series, DataFrame
+
+import glob
+glob.glob('2022*-divvy-tripdata.csv')
+
+
+full_year = []
+for one_filename in glob.glob('2022*-divvy-tripdata.csv'):
+    print(f'Loading {one_filename}')
+    new_df = pd.read_csv(one_filename, low_memory=False)
+    full_year.append(new_df)
+    
+    df = pd.concat(full_year)
+df.drop(['end_station_id','end_station_name', 'start_station_id', 'start_station_name'
+], axis=1, inplace=True)
+df.drop(['start_lat','start_lng','end_lat','end_lng'], axis=1, inplace=True)
+df.shape
+df.info()
+
+df['ended_at'] = pd.to_datetime(df['ended_at'], errors='coerce')
+df['started_at'] = pd.to_datetime(df['started_at'], errors='coerce')
+df.info()
+
+df['ride_length'] = df['ended_at'] - df['started_at']
+df['weekday'] = df['started_at'].dt.day_name()
+df.head()
+
+df.isnull()
