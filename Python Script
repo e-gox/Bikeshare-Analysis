@@ -36,8 +36,11 @@ import seaborn as sns
 
 plt.figure(figsize=(15,5))
 sns.countplot(x="weekday",hue="member_casual",data=df,order=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],palette="hls")
+plt.xlabel('Days of the Week')
+plt.ylabel('Bike Riders')
+plt.title('Amount of Riders per Day')
 
-df['hours'] = df['ride_length'].dt.total_seconds().div(60).astype(int)
+df['minutes'] = df['ride_length'].dt.total_seconds().div(60).astype(int)
 df.head()
 
 plt.figure(figsize=(15,5))
@@ -45,8 +48,14 @@ sns.countplot(x="rideable_type",hue="member_casual",data=df,palette="hls")
 
 plt.figure(figsize=(15,5))
 sns.barplot(y="minutes",x="rideable_type",hue="member_casual",data=df,palette="hls")
+plt.xlabel('Bike Types')
+plt.ylabel('Bike Riders')
+plt.title('Categorizing Bike Riders')
 
 plt.figure(figsize=(15,5))
 sns.barplot(y="minutes",x="weekday",hue="member_casual",data=df,order=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],palette='hls')
+plt.xlabel('Days of the Week')
+plt.ylabel('Time(minutes)')
+plt.title('Average Duration per Day')
 
 pd.value_counts(df['rideable_type'])
