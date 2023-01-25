@@ -5,4 +5,3 @@
 4. Summary - Casual riders were more activate on weekends oppossed to members who were more activate on weekdays. On average casual riders spent a longer duration of time on bikes than members did. This is likely due to members using services for work transportation oppossed to casual riders who use it for more leisurely activities.
 5. Supporting visualizations - ![image](https://user-images.githubusercontent.com/112779850/214220868-0b2410e8-427e-41fb-92ee-36f5b77a101c.png)
 ![image](https://user-images.githubusercontent.com/112779850/214220911-e1a55811-5e09-4f2c-8731-c25007ecf2f7.png)
-7. Your top three recommendations based on your analysis
