@@ -1,5 +1,5 @@
 # Bikeshare-Analysis
-1. Business task - Determine the meterics that make causual riders unique from members and how provide ways to increase revenue.   
+1. Business task - Determine the meterics that make causual riders unique from members and provide ways to increase revenue.   
 2. Data sources - The previous 6 months of historical data was acquired from Cyclistic and consolidated in to one dataframe via Python. 
 3. Data cleaning and manipulation - The dataframe originally contained 13 columns after determining necessary variables this was reduced to 5. In order to determine how long each rider was using the product the "started_at" and "ended_at" columns were converted in to the datetime datatype. The ride length was than converted in to a integer calculated in minutes. A new column weekday was added. Data was vetted for null values, however none was found.
 4. Summary - Casual riders were more activate on weekends oppossed to members who were more activate on weekdays. On average casual riders spent a longer duration of time on bikes than members did. This is likely due to members using services for work transportation oppossed to casual riders who use it for more leisurely activities.
